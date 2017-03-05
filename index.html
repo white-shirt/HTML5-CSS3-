@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>圣诞主题</title>
+    <link rel='stylesheet' href='CSS/common.css' />
+    <link rel="stylesheet" href="CSS/pageA.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/observer.js"></script>
+    <script src="js/christmas.js"></script>
+    <script src="js/pageA.js"></script>
+    <script src="js/pageB.js"></script>
+    <script src="js/pageC.js"></script>
+</head>
+
+<body>
+<section class="container">
+    <!-- 第一幅画面 -->
+    <section class="page-a bg-adaptive">
+        <figure class="moon"></figure>
+        <figure class="tree"></figure>
+        <figure class="cloud"></figure>
+        <div class="chs-boy chs-boy-deer"></div>
+        <div class="window wood">
+            <div class="window-bg"></div>
+            <div class="window-content">
+                <div class="window-left"></div>
+                <div class="window-right"></div>
+            </div>
+        </div>
+    </section>
+    <!-- 第二幅画面 -->
+    <section class="page-b bg-adaptive">
+    </section>
+    <!-- 第三幅画面 -->
+    <section class="page-c bg-adaptive">
+    </section>
+</section>
+</body>
+<script type="text/javascript">
+    //rem设置
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                    //宽与高度
+                    document.body.style.height = clientWidth * (900 / 1440) + "px"
+                };
+        win.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</html>

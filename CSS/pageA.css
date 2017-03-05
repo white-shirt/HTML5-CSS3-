@@ -1,0 +1,253 @@
+.container .page-a {
+    width  : 100%;
+    height : 100%;
+    background-image: url("../img/a/page-a-bg.png");
+    position: absolute;
+    z-index: 5;
+}
+
+/*tree*/
+
+.container .page-a .tree{
+    width: 2.71rem;
+    height: 4.24rem;
+    z-index: 15;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    background-image: url("../img/a/trees.png");
+    background-size: 200% 100%;
+    -webkit-animation: treeAnimation 1s steps(2) infinite;
+    -moz-animation: treeAnimation 1s steps(2) infinite;
+}
+
+@-webkit-keyframes treeAnimation {
+    0%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: -200% 100%;
+    }
+}
+
+@-moz-keyframes treeAnimation {
+    0%{
+        background-position: 0% 100%;
+    }
+    100%{
+        background-position: -200% 100%;
+    }
+}
+
+/*moon*/
+
+.container .page-a .moon{
+    background: #FCF0BC;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 3.3rem;
+    top: 0.8rem;
+    box-shadow: 0 0 1.5rem #FCF0BC;
+    -webkit-animation: Blink 2s infinite linear;
+    -moz-animation: Blink 2s infinite linear;
+}
+
+@-webkit-keyframes Blink {
+    0%{
+        box-shadow: 0 0 0 transparent;
+    }
+    50%{
+        box-shadow: 0 0 1rem #FCF0BC;
+    }
+    100%{
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+@-moz-keyframes Blink {
+    0%{
+        box-shadow: 0 0 0 transparent;
+    }
+    50%{
+        box-shadow: 0 0 1rem #FCF0BC;
+    }
+    100%{
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+/*cloud*/
+
+.container .page-a .cloud{
+    background: #60768D;
+    border-radius: 50%;
+    box-shadow: #60768D 1.2rem -0.2rem 0 -0.1rem,
+                #60768D 0.5rem -0.5rem,
+                #60768D 0.8rem 0.2rem,
+                #60768D 1.5rem 0.2rem 0 -0.2rem;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 1rem;
+    top: 1.8rem;
+    z-index: 5;
+    -webkit-animation: cloudMove 5s ease-in-out infinite;
+    -moz-animation: cloudMove 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes cloudMove {
+    0%{
+        -webkit-transform: translateX(1rem);
+    }
+    50%{
+        -webkit-transform: translateX(5rem);
+    }
+    100%{
+        -webkit-transform: translateX(1rem);
+    }
+}
+
+@-moz-keyframes cloudMove {
+    0%{
+        -moz-transform: translateX(1rem);
+    }
+    50%{
+        -moz-transform: translateX(5rem);
+    }
+    100%{
+        -moz-transform: translateX(1rem);
+    }
+}
+
+/*chs-boy*/
+
+.container .page-a .chs-boy{
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    z-index: 16;
+    top: 0.1rem;
+    right: -3rem;
+    transform: scale(0.1);
+    background-image: url("../img/a/boy-sleigh-car.png");
+    background-size: 400% 100%;
+}
+
+/*chs-boy-deer*/
+
+.container .page-a .chs-boy-deer{
+    -webkit-animation: chsBoyDeer 0.7s steps(3,end) infinite;
+    -moz-animation: chsBoyDeer 0.7s steps(3,end) infinite;
+}
+
+@-webkit-keyframes chsBoyDeer {
+    0% {
+        background-position: -0% 100%;
+    }
+    100% {
+        background-position: -300% 100%;
+    }
+}
+
+@-moz-keyframes chsBoyDeer {
+    0% {
+        background-position: -0% 100%;
+    }
+    100% {
+        background-position: -300% 100%;
+    }
+}
+
+/*window*/
+.container .page-a .window{
+    width: 2.6rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 9.7rem;
+    top: 6.2rem;
+    cursor: pointer;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+}
+
+.container .page-a .window .window-content{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    width: 91%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .page-a .window .window-bg{
+    width: 86%;
+    height: 92%;
+    position: absolute;
+    left: 50%;
+    margin-left: -43%;
+    bottom: 0.2rem;
+    background-image: url("../img/a/page-a-window-bg.png");
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.container .page-a .window:before{
+    content: "";
+    background-image: url("../img/a/window-bottom.png");
+    width: 100%;
+    height: 0.17rem;
+    display: block;
+    position: absolute;
+    bottom: 0.05rem;
+    background-size: 100% 100%;
+    z-index: 50;
+}
+
+.container .page-a .wood{
+    display: block;
+    overflow: hidden;
+}
+
+/*左侧窗*/
+
+.container .page-a .window .window-left{
+    float: left;
+    background-image: url("../img/a/window-left.png");
+    -webkit-border-top-left-radius: 0.1rem;
+    -moz-border-top-left-radius: 0.1rem;
+}
+
+.container .page-a .window .window-right{
+    float: right;
+    background-image: url("../img/a/window-right.png");
+    -webkit-border-top-right-radius: 0.1rem;
+    -moz-border-top-left-radius: 0.1rem;
+}
+
+.container .page-a .window .window-left,.window-right{
+    width: 1.17rem;
+    height: 1.3rem;
+    z-index: -1;
+    box-shadow: 0 0 0.15rem #FCF0BC;
+    background-size: 100% 100%;
+}
+
+.window-transition {
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+}
+
+.window-left_hover {
+    -webkit-transform: rotateY(60deg);
+    -moz-transform: rotateY(60deg);
+    margin-top: 0.1rem;
+    margin-left: -0.25rem;
+}
+.window-right_hover {
+    -webkit-transform: rotateY(-60deg);
+    -moz-transform: rotateY(-60deg);
+    margin-top: 0.1rem;
+    margin-right: -0.25rem;
+}
